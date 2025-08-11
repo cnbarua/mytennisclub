@@ -18,5 +18,7 @@ En browser: 127.0.0.1:8000 or localhost:port
 python manage.py startapp appName
 
 
+8. Migrar los modelos a bd sqlite3
+python manage.py makemigrations members
 
 
