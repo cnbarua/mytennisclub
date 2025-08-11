@@ -1,0 +1,22 @@
+1. Crear un entorno virtual y activar
+python -m venv envName
+envName\Scripts\activate.bat
+
+2. Instalar django en el envName
+python -m pip install Django
+
+3. Crear proyecto en Django:
+django-admin startproject projectName
+
+4. Ejecutar el proyecto en el Server
+python manage.py runserver
+
+5. Ver que se ejecute el server
+En browser: 127.0.0.1:8000 or localhost:port
+
+6. Crear una app
+python manage.py startapp appName
+
+
+
+
