@@ -1,17 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="{% static 'base.css' %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
 </head>
 <body>
 
+    <div class="topnav">
+        <a href="/">HOME</a> |
+        <a href="/members">MEMBERS</a> | 
+        <a href="/testing">TESTING</a>
+    </div>
+
     {% block content %}
     {% endblock %}
-    
-    <p>Check out all our <a href="/members">Members</a> | <a href="/">Index</a> | <a href="/testing">Testing</a></p>
+    <footer>
+        <p>&copy; 2025 My Tennis Club</p>
+    </footer>
 </body>
 </html>
