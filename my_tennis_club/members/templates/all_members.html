@@ -5,11 +5,27 @@
 {% endblock %}
 
 
+
 {% block content %}
-  <h1>Members</h1>
-  <ul>
-    {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-    {% endfor %}
-  </ul>
+  <h2>Welcome to the members page of My Tennis Club!</h2>
+
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for x in mymembers %}
+            <tr>
+                <td><a href="details/{{ x.id }}">{{ x.firstname }}</a></td>
+                <td><a href="details/{{ x.id }}">{{ x.lastname }}</td>
+                <td>{{  x.phone }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}

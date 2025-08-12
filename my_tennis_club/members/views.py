@@ -23,3 +23,14 @@ def details(request, id):
     'mymember': mymember,
   }
   return HttpResponse(template.render(context, request))
+
+def testing(request):
+    #mydata = Member.objects.all().values()
+    mydata = (Member.objects.filter(lastname='Trump').values() | 
+              Member.objects.filter(firstname__startswith='L').values()).order_by('lastname', '-firstname')
+    template = loader.get_template('testing.html')
+    context = {
+      'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
+

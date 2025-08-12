@@ -1,0 +1,28 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+  My Tennis Club - Testing Page
+{% endblock %}
+
+{% block content %}
+  <h1>Testing Page - My Tennis Club</h1>
+  
+  <h3>Members List</h3>
+<table border='1' cellpadding='5' cellspacing='0'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Phone</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+        <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+        <td>{{ x.phone }}</td>
+    </tr>
+  {% endfor %}
+</table>
+<p>This is a testing page for My Tennis Club.</p>
+{% endblock %}
