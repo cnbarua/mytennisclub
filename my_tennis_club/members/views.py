@@ -4,7 +4,7 @@ from .models import Member
 
 
 def index(request):
-    template = loader.get_template('myfirst.html')
+    template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
 
