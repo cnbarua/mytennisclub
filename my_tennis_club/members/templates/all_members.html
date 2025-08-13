@@ -19,9 +19,8 @@
         <tbody>
           {% for x in mymembers %}
                 <tr>
-                  
-                    <td><a href="details/{{ x.id }}">{{ x.firstname }}</a></td>
-                    <td><a href="details/{{ x.id }}">{{ x.lastname }}</td>
+                    <td><li onclick="window.location = 'details/{{ x.slug }}'">{{ x.firstname }}</li></td>
+                    <td><a href="details/{{ x.slug }}">{{ x.lastname }}</td>
                     <td>{{  x.phone }}</td>
                 </tr>
             {% endfor %}

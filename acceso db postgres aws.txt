@@ -1,0 +1,10 @@
+https://sa-east-1.console.aws.amazon.com/rds/home?region=sa-east-1#databases:
+
+Base de datos: w3-django-project
+
+punto de enlace: 
+w3-django-project.c2zgysi0epfl.us-east-1.rds.amazonaws.com
+
+user: masteruser
+pass: AV5ZJ56k1oZYZ6CA8NY2
+

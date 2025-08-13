@@ -16,8 +16,8 @@ def members(request):
     }
     return HttpResponse(template.render(context, request))
 
-def details(request, id):
-  mymember = Member.objects.get(id=id)
+def details(request, slug):
+  mymember = Member.objects.get(slug=slug)
   template = loader.get_template('details.html')
   context = {
     'mymember': mymember,
@@ -34,3 +34,10 @@ def testing(request):
     }
     return HttpResponse(template.render(context, request))
 
+def contact(request):
+    template = loader.get_template('contact.html')
+    return HttpResponse(template.render())
+
+def react(request):
+    template = loader.get_template('react.html')
+    return HttpResponse(template.render())

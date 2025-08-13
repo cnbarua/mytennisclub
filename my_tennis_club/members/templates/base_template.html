@@ -5,20 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
 </head>
 <body>
 
-    <div class="topnav">
-        <a href="/">HOME</a> |
-        <a href="/members">MEMBERS</a> | 
-        <a href="/testing">TESTING</a>
+    <div class="container">
+        <ul class="nav bg-info">
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/members">MEMBERS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/testing">TESTING</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/contact">CONTACT</a>  
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/admin">ADMIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="/react">REACT</a>  
+            </li>
+        </ul>
+        
     </div>
 
     {% block content %}
     {% endblock %}
     <footer>
-        <p>&copy; 2025 My Tennis Club</p>
+        <p class="footer">&copy; 2025 My Tennis Club</p>
     </footer>
 </body>
 </html>
