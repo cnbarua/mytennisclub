@@ -1,12 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+    <link rel="stylesheet" href="{% static 'base.css' %}">  
+</head>
   <body>
-
+<div class="mycard">Ejemplo/Practica de ReactJS</div>
     <div id="mydiv"></div>
 
     <script type="text/babel">
