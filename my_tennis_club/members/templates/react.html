@@ -6,20 +6,19 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="{% static 'base.css' %}">  
-</head>
-  <body>
-<div class="mycard">Ejemplo/Practica de ReactJS</div>
-    <div id="mydiv"></div>
-
     <script type="text/babel">
       function Hello() {
-        return <h1>Hello World!</h1>;
+        return <h2 align="center">Hello World! - My first react project...</h2>;
       }
 
       const container = document.getElementById('mydiv');
       const root = ReactDOM.createRoot(container);
       root.render(<Hello />)
     </script>
-
+  </head>
+  <title>React Example</title>
+  <body>
+    <div class="mycard"><h1>Practica de ReactJS</h1></div>
+    <div id="mydiv"></div>
   </body>
 </html>
